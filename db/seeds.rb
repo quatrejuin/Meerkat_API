@@ -8,7 +8,7 @@
 
 
 User.destroy_all
-User.create(name: 'api', email: 'api@aceworld.com.au', password: '123456')
+User.create(name: 'api', email: 'api@aceworld.com.au', password: '123456',token:'YF1MNSZNvpN71U6oq71zUSJy')
 
 Product.destroy_all
 Product.create(
