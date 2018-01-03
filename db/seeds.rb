@@ -9,3 +9,11 @@
 
 User.destroy_all
 User.create(name: 'api', email: 'api@aceworld.com.au', password: '123456')
+
+Product.destroy_all
+Product.create(
+       name:'Tea',
+       sku:'sku001',
+       price:'11',
+       quantity:'1000'
+)
