@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     post   "/login"       => "sessions#create"
     delete "/logout"      => "sessions#destroy"
   end
+
+  post "graphql" => "graphqls#create"
+
+  #mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
 end
