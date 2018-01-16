@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   post "graphql" => "graphqls#create"
 
+  match '*all', controller: 'graphql', action: 'cors_preflight_check', via: [:options]
+
   #mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
 end
