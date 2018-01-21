@@ -17,3 +17,9 @@ Product.create(
        price:'11',
        quantity:'1000'
 )
+Product.create(
+       name:'iPhone',
+       sku:'sku002',
+       price:'599',
+       quantity:'59'
+)

@@ -20,8 +20,10 @@ class GraphqlsController < ApplicationController
     def create
         query_string = params[:query]
         query_variables = JSON.load(params[:variables]) || {}
-        context = { current_product: Product.find(2) }
-        result = Schema.execute(query_string, variables: query_variables, context: context)
+        # context = { current_product: Product.all }
+        # result = Schema.execute(query_string, variables: query_variables, context: context)
+        result = Schema.execute(query_string, variables: query_variables)
+
         render json: result
     end
 end
