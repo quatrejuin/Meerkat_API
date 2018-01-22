@@ -1,4 +1,4 @@
-class Resolvers::removeProduct < GraphQL::Function
+class Resolvers::RemoveProduct < GraphQL::Function
   # arguments passed as "args"
   argument :id, !types.Int
   # return type from the mutation
