@@ -19,6 +19,6 @@ class Resolvers::UpdateProduct < GraphQL::Function
       args[:input].to_h 
     )
     r.save!
-    return r.reload
+    return r
   end
 end

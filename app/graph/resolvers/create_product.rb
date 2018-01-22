@@ -13,6 +13,6 @@ class Resolvers::CreateProduct < GraphQL::Function
   # args - are the arguments passed
   # _ctx - is the GraphQL context (which would be discussed later)
   def call(_obj, args, _ctx)
-    Product.create!(args[:input])
+    Product.create!(args[:input].to_h)
   end
 end
