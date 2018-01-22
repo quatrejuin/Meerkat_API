@@ -3,12 +3,13 @@ QueryType = GraphQL::ObjectType.define do
     description "The query root of this schema"
   
     field :products, !types[ProductType] do
-      description "Current product"
+      description "all product"
       resolve ->(obj, args, ctx) {
         # ctx[:current_product]
         Product.all
       }
     end
+    
     field :product do
       type ProductType
       argument :id, !types.Int

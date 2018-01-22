@@ -23,7 +23,6 @@ class GraphqlsController < ApplicationController
         # context = { current_product: Product.all }
         # result = Schema.execute(query_string, variables: query_variables, context: context)
         result = Schema.execute(query_string, variables: query_variables)
-
         render json: result
     end
 end
