@@ -14,8 +14,11 @@ class Resolvers::UpdateProduct < GraphQL::Function
   # args - are the arguments passed
   # _ctx - is the GraphQL context (which would be discussed later)
   def call(_obj, args, _ctx)
-    Product.find(args[:id]).update!(
-      args[:input]
+    r=Product.find(args[:id])
+    r.update!(
+      args[:input].to_h 
     )
+    r.save!
+    return r.reload
   end
 end
