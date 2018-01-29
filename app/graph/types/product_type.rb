@@ -25,15 +25,12 @@ end
 ProductInputType = GraphQL::InputObjectType.define do
   name "ProductInputType"
   description "Properties for creating a Product"
-
   argument :name, !types.String do
     description "Title of the post."
   end
-
   argument :price, types.Int do
     description "Title of the post."
   end
-
   argument :quantity, types.Int do
     description "Description of the post."
   end
